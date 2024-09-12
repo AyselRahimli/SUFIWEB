@@ -3,7 +3,6 @@ SpeechRecognition==3.8.1
 gTTS==2.2.3
 pydub==0.25.1
 transformers==4.33.0
-torch==2.3.1+cpu
+torch==2.3.1  # or use torch==2.4.0 if 2.3.1 is problematic
 tokenizers==0.19.1
 Pillow==10.3.0
-
