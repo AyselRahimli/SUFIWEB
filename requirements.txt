@@ -1,6 +1,6 @@
-streamlit==1.25.0        
-SpeechRecognition==3.8.1 
-gTTS==2.2.3              
-pydub==0.25.1           
-transformers==4.33.0     
-torch==2.0.1             
+streamlit==1.25.0
+SpeechRecognition==3.8.1
+gTTS==2.2.3
+pydub==0.25.1
+transformers==4.33.0
+torch        
