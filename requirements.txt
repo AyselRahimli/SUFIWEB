@@ -3,6 +3,6 @@ SpeechRecognition==3.8.1
 gTTS==2.2.3
 pydub==0.25.1
 transformers==4.33.0
-torch==2.3.1  # or use torch==2.4.0 if 2.3.1 is problematic
-tokenizers==0.13.3  
-Pillow==9.5.0
+torch==2.3.1  # or torch==2.4.0 if 2.3.1 causes issues
+tokenizers==0.13.3  # Compatible with transformers 4.33.0
+Pillow==9.5.0  # Compatible with streamlit 1.25.0
