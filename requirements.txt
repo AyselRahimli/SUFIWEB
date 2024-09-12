@@ -4,5 +4,5 @@ gTTS==2.2.3
 pydub==0.25.1
 transformers==4.33.0
 torch==2.3.1  # or use torch==2.4.0 if 2.3.1 is problematic
-tokenizers==0.19.1
+tokenizers==0.13.3  
 Pillow==9.5.0
