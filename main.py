@@ -7,12 +7,11 @@ from pydub.playback import play
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
-# Load a pre-trained conversational model (DialoGPT in this case)
+
 model_name = "microsoft/DialoGPT-medium"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
-# Function to recognize speech and convert to text
 def recognize_speech():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
@@ -26,7 +25,7 @@ def recognize_speech():
         st.write("Səs tanınmadı")
         return None
 
-# Function to generate chatbot response using DialoGPT
+
 def get_chatbot_response(user_input):
     new_input_ids = tokenizer.encode(user_input + tokenizer.eos_token, return_tensors='pt')
     bot_input_ids = new_input_ids
@@ -34,7 +33,6 @@ def get_chatbot_response(user_input):
     response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
     return response
 
-# Text-to-speech (TTS) function for Azerbaijani responses
 def speak(text):
     tts = gTTS(text=text, lang='az')
     audio = BytesIO()
@@ -42,7 +40,6 @@ def speak(text):
     audio.seek(0)
     return audio
 
-# Streamlit web interface
 st.title("Azerbaijani Voice Chatbot")
 st.write("Səsli chatbotla danışın")
 
